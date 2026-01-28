@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Marwan World</title>
+  <link rel="stylesheet" href="styls.css">
+  <link rel="stylesheet" href="photos.html">
+  <link rel="stylesheet" href="home.html">
+</head>
+
+
+<script>
+  function toggleDotsMenu(){
+    const menu = document.getElementById("dotsMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+  </script>
+
+
+<body>
+
+  <!-- الهيدر -->
+  <header class="header">
+
+    <!-- اللوجو + الاسم -->
+    <div class="logo-area">
+      <div class="logo-box">
+        <img src="logo.png.jpeg" class="logo" alt="Logo">
+        <span class="site-name">Marwan World</span>
+      </div>
+    </div>
+
+    <!-- عناصر اليمين -->
+    <nav class="menu">
+      <a href="vo.html">افلام</a>
+    <a href="photps.html">صور</a>
+    <a href="songs.html">أغاني</a>
+    <a href="pde.html">pdf</a>
+    <!--الثلاث نقط-->
+    <div class="three-dots-box">
+      <!-- الثلاث نقط -->
+      <span class="three-dots" onclick="toggleDotsMenu()">⋮</span>
+  
+      <!-- القائمة المنسدلة -->
+      <div class="dots-menu" id="dotsMenu">
+          <div class="menu-item" onclick="goSettings()">
+              <span class="gear">⚙️</span> Settings
+          </div>
+          <div class="menu-item">Dark Mode</div>
+          <div class="menu-item">Light Mode</div>
+          <div class="menu-item">Font Size</div>
+      </div>
+  </div>
+    </div>
+    </nav>
+<script src="scriipt.js"></script>
+  </header>
+
+  <hr /><!--خط عرض اغاني و صور-->
+
+    <div class="home-center">
+    <img src="oppo.jpeg" class="home-logo">
+    <h1>مرحبًافي موقي👋</h1>
+    <p></p>
+    <h1>{Marwan World}</h1>
+    
+    </div>
+   <div id="viewer">
+   <span class="close" onclick="closeViewer()">×</span>
+  <span class="arrow left" onclick="prevImg()">❮</span>
+
+  <img id="viewer-img">
+
+  <span class="arrow right" onclick="nextImg()">❯</span>
+</div>
+
+<div class="clock-container">
+  <div id="clock">12:00: AM</div>
+</div>
+<script src="clock.js"></script>
+<div id="date"></div>
+
+
+
+
+
+<div class="home-center">
+  <a href="calculator.html" class="home-box">الالة الحاسبة</a>
+</div>
+
+<div class="home-center">
+  <a href="fawezi.html" class="home-box">فوازير</a>
+</div>
+
+<div class="home-center">
+  <a href="jokes.html" class="home-box">نكت مضحكة</a>
+</div>
+
+<div class="home-center">
+  <a href="dice.html" class="home-box">الزهرة</a>
+</div>
+
+<div class="home-center">
+  <a href="javascript.js" class="home-box">شات الذكاء </a>
+</div>
+
+<div class="home-center">
+  <a href="links.html" class="home-box">روابط </a>
+</div>
+
+
+
+<div class="home-center">
+  <a href="game.html" class="home-box"> العاب </a>
+</div>
+
+
+<!-- زر واتساب للتواصل -->
+ <a href="https://wa.me/201040157059?text=مرحبًا%20مروان،%20شُفت%20الموقع%20بتاعك%20وعايز%20أتواصل%20معاك"
+   target="_blank" 
+   class="whatsapp-btn">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+ </a>
+
+
+
+<body class="site-bg"></body>
+
+
+
+
+
+
+</body>
+</html>
