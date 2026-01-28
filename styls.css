@@ -1,0 +1,357 @@
+/* ================= إعدادات عامة ================= */
+body {
+  margin: 0;
+  background: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+}
+
+/* الهيدر */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* منطقة اللوجو */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+}
+
+/* اللوجو + الاسم */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 90px;
+}
+
+.site-name {
+  color: rgb(173, 173, 173);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* منيو اليمين */
+.menu {
+  display: flex;
+  gap: 25px;
+  margin-right: 29px;
+  margin-top: 23px;
+}
+
+.menu a {
+  color: silver;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.menu a:hover {
+  color: rgb(83, 206, 255); /* لون لبني عند المرور */
+  opacity: 1;
+}
+
+/* الجاليري */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 صور في الصف */
+  gap: 8px;
+  padding: 15px;
+  margin-top: 100px; /* أقل من القديم */
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* عرض الصورة */
+#viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 4000;
+}
+
+#viewer-img {
+  width: 70%;
+  max-width: 600px;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+/* زر الإغلاق */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  color: rgb(29, 255, 244);
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: rgb(41, 230, 255);
+  cursor: pointer;
+  user-select: none;
+  background: rgba(20, 208, 255, 0.733);
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.left { left: 30px; }
+.arrow.right { right: 30px; }
+
+.arrow:hover,
+.close:hover {
+  color: #1e90ff;
+}
+
+/* الصفحة الرئيسية */
+.home-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0; /* بدل height كبير */
+}
+
+.home-logo {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 70%;
+  border: 4px solid rgb(177, 177, 177);
+  margin-bottom: 15px;
+}
+
+.home-center h1 {
+  color: rgb(192, 192, 192);
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* أزرار الهومي */
+.buttons-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 15px; /* المسافة بين الزرار الأول والثاني */
+  padding: 15px 0;
+}
+
+/* أزرار التطبيق */
+.home-box, .app-btn {
+  width: 200px;      /*حجم عرض زر البوكس*/
+  height: 60px;    /*حجم طول زر البوكس*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+                          /*اللون الي جوه زر البوكس*/
+  color: rgba(30, 210, 241, 0.781);  /*العنوان داخل البوكس*/
+  font-size: 30px;   /*حجم مقاس خط العنوان*/
+  font-weight: bold;
+  text-decoration: none;
+  border: 4px solid silver;  /*لون حواف البوكس*/
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.home-box:hover, .app-btn:hover {  /*زر البكس عند الضغط*/
+  background: #030303;   /*اللون الثاني عند ضغط الزر*/
+  color: rgb(161, 159, 159);      /*اللون الثاني للعنوان */
+  border-color: #4ebeff;     /*اللون الثاني لحواف البوكس*/
+}
+
+/* زر واتساب ثابت */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(232, 234, 235, 0.3);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* خلفية الموقع */
+.site-bg {
+  background: url("colrlogo.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh; /* عشان تغطي كامل الشاشة */
+}
+
+.site-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
+}
+
+/* صندوق الذكاء الاصطناعي */
+.ai-box {
+  width: 320px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #111;
+  border: 2px solid #89fbff;
+  border-radius: 16px;
+  text-align: center;
+  color: silver;
+}
+
+/* خانة الكتابة */
+.ai-box input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* زر الإرسال */
+.ai-box button {
+  padding: 10px 25px;
+  border-radius: 12px;
+  border: none;
+  background: #89fbff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ai-box button:hover {
+  background: #1e90ff;
+  color: white;
+}
+
+/* مكان الرد */
+#answer {
+  margin-top: 15px;
+  color: #89fbff;
+  font-weight: bold;
+}
+.div{
+  width: 320px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #111;
+  border: 2px solid #89fbff;
+  border-radius: 16px;
+  text-align: center;
+  color: silver;
+}
+
+/*الساعة*/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* حاوية الساعة */
+.clock-container{
+  
+  position: fixed;
+  top: 73px;
+  left: 91%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+/* شكل الساعة */
+#clock{
+  
+  color: rgb(121, 118, 118);
+  padding: 15px 30px;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 15px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(4, 186, 241, 0.836);
+  font-family: 'Arial', sans-serif;
+}
+
+/* حاوية الثلاث نقط */
+.three-dots-box{
+  position: relative;
+}
+
+/* الثلاث نقط */
+.three-dots{
+  font-size: 28px;
+  cursor: pointer;
+  color: rgb(45, 193, 252);
+  padding: 1px 10px;
+  border-radius: 50%;
+}
+
+.three-dots:hover{
+  background: rgba(255,255,255,0.15);
+}
+
+/* القائمة */
+.dots-menu{
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  min-width: 140px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+/* عنصر القائمة */
+.menu-item{
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-item:hover{
+  background: #222;
+}
+
