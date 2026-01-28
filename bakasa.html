@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لعبة بكاسة</title>
+<link rel="stylesheet" href="bakasa.css">
+<style>
+    body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h2 { margin-bottom: 20px; }
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #28a745;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover { background: #218838; }
+
+#instructionBox {
+  display: none;
+  background: #222;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+</style>
+</head>
+<script src="bakasa.js"></script>
+<body>
+
+<h2>🎮 لعبة بكاسة الخش</h2>
+
+<div id="namesInput">
+  <p>اكتب أسماء 3 لاعبين على الأقل</p>
+  <input type="text" id="player1" placeholder="اللاعب الأول">
+  <input type="text" id="player2" placeholder="اللاعب الثاني">
+  <input type="text" id="player3" placeholder="اللاعب الثالث">
+  <br>
+  <button id="startBtn">ابدأ اللعبة</button>
+</div>
+
+<div id="instructionBox">
+  <p id="playerInstruction"></p>
+  <button id="nextBtn">التالي</button>
+</div>
+
+<script src="bakasa.js"></script>
+</body>
+</html>
